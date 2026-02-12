@@ -72,4 +72,23 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Background Music - Auto-play on first user interaction
+  const music = document.getElementById('bg-music');
+  if (music) {
+    music.volume = 0.3;
+    const tryPlay = () => {
+      music.play().catch(() => { });
+      document.removeEventListener('click', tryPlay);
+      document.removeEventListener('scroll', tryPlay);
+      document.removeEventListener('touchstart', tryPlay);
+    };
+    // Try autoplay immediately
+    music.play().catch(() => {
+      // Blocked by browser - wait for first user interaction
+      document.addEventListener('click', tryPlay, { once: true });
+      document.addEventListener('scroll', tryPlay, { once: true });
+      document.addEventListener('touchstart', tryPlay, { once: true });
+    });
+  }
 });
