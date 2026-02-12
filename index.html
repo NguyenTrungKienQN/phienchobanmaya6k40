@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phiên chợ Bản Mây</title>
+  <meta name="description" content="Phiên chợ vùng cao đậm đà bản sắc." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="spinner"></div>
+  </div>
+  <script>
+    // FAMILSAFE LOADER REMOVER
+    // If JS fails, this ensures user can still see content
+    setTimeout(() => {
+      const loader = document.getElementById('loader');
+      if (loader) loader.classList.add('hidden');
+    }, 2500); 
+  </script>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo"></a>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#hero" class="nav-link">Trang Chủ</a></li>
+        <li><a href="#hon-nui" class="nav-link">Hồn Núi</a></li>
+        <li><a href="#canh-may" class="nav-link">Cảnh Mây</a></li>
+        <li><a href="#vi-ban" class="nav-link">Vị Bản</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
+      <h1 class="hero-title">Phiên Chợ Vùng Cao</h1>
+      <p class="hero-subtitle">Nơi Thời Gian Ngưng Đọng</p>
+      <a href="#hon-nui" class="btn">Khám Phá Ngay</a>
+    </div>
+  </section>
+
+  <!-- Section 1: Hồn Núi -->
+  <section id="hon-nui" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Hồn Núi</h2>
+      <p class="section-desc" data-aos="fade-up">Truyền Thống Phiên Chợ Vùng Cao</p>
+
+      <div class="content-grid">
+        <div class="text-col" data-aos="fade-right">
+          <h3>Phiên Chợ Vùng Cao – Nơi Thời Gian Ngưng Đọng</h3>
+          <p>
+            Chợ phiên không chỉ là nơi trao đổi hàng hóa mà là một "Lễ hội thu nhỏ".
+            Đó là nơi những tà váy thổ cẩm xuống phố, nơi tiếng khèn Mông gọi bạn
+            và mùi khói bếp quyện cùng hương vị Thắng cố, Mèn mén đặc trưng.
+          </p>
+          <p>
+            Văn hóa vùng cao luôn ẩn chứa những vẻ đẹp mộc mạc, chân thành như chính con người nơi đây.
+          </p>
+        </div>
+        <div class="image-col" data-aos="fade-left">
+          <div class="image-wrapper">
+            <img src="/images/hon-nui.jpg" alt="Văn hóa vùng cao"
+              onerror="this.src='https://placehold.co/800x600/b71c1c/ffd600?text=Hồn+Núi'" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Cảnh Mây -->
+  <section id="canh-may" class="section section-light">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Phiên Chợ Bản Mây</h2>
+      <p class="section-desc" data-aos="fade-up">Nhịp Sống Vùng Cao</p>
+
+      <div class="content-grid reverse">
+        <div class="text-col" data-aos="fade-left">
+          <h3>Nhịp Sống Vùng Cao</h3>
+          <p>
+            Phiên chợ Bản Mây tái hiện sinh động nét văn hóa Tây Bắc. Từ những gian hàng bày bán
+            sản vật địa phương đến âm thanh rộn ràng của hội xuân, chúng mình mong muốn mang đến
+            một không gian giao lưu ấm áp, đậm đà bản sắc dân tộc.
+          </p>
+        </div>
+        <div class="image-col" data-aos="fade-right">
+          <div class="image-wrapper">
+            <img src="/images/canh-may.jpg" alt="Gian hàng Bản Mây"
+              onerror="this.src='https://placehold.co/800x600/ffd600/b71c1c?text=Cảnh+Mây'" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Vị Bản (Menu Expanded & Inline Images) -->
+  <div id="vi-ban">
+
+    <!-- Category Divider 1 -->
+    <div class="category-divider" data-aos="fade-in">
+      <div class="container">
+        <h2>Bếp Nhà Mị</h2>
+        <p>Tinh hoa ẩm thực - Hương vị chuẩn vùng cao</p>
+      </div>
+    </div>
+
+    <!-- ITEM 1 -->
+    <div class="product-section" style="background-image: url('/images/kho-ga.jpg');">
+      <div class="container">
+        <div class="content-grid">
+          <div class="text-col" data-aos="fade-right">
+            <h3 class="product-title">Khô Gà Gác Bếp</h3>
+            <div class="product-price">20k</div>
+            <p class="product-desc">Hương vị đậm đà, dai ngon, thơm mùi mắc khén và khói bếp đặc trưng.</p>
+          </div>
+          <div class="image-col" data-aos="fade-left">
+            <div class="image-wrapper">
+              <img src="/images/kho-ga.jpg" alt="Khô gà"
+                onerror="this.src='https://placehold.co/800x500/d50000/ffd600?text=Khô+Gà'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="product-section" style="background-image: url('/images/kho-heo.jpg');">
+      <div class="container">
+        <div class="content-grid reverse">
+          <div class="text-col" data-aos="fade-left">
+            <h3 class="product-title">Khô Heo Hun Khói</h3>
+            <div class="product-price">20k</div>
+            <p class="product-desc">Thịt heo chọn lọc, tẩm ướp gia vị rừng, hun khói tự nhiên.</p>
+          </div>
+          <div class="image-col" data-aos="fade-right">
+            <div class="image-wrapper">
+              <img src="/images/kho-heo.jpg" alt="Khô heo"
+                onerror="this.src='https://placehold.co/800x500/ffd600/d50000?text=Khô+Heo'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="product-section" style="background-image: url('/images/thit-xien.jpg');">
+      <div class="container">
+        <div class="content-grid">
+          <div class="text-col" data-aos="fade-right">
+            <h3 class="product-title">Thịt Xiên Nướng</h3>
+            <div class="product-price">10k</div>
+            <p class="product-desc">Xiên thịt nướng than hoa thơm lừng, đậm vị Tây Bắc.</p>
+          </div>
+          <div class="image-col" data-aos="fade-left">
+            <div class="image-wrapper">
+              <img src="/images/thit-xien.jpg" alt="Thịt xiên"
+                onerror="this.src='https://placehold.co/800x500/d50000/ffd600?text=Thịt+Xiên'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="product-section" style="background-image: url('/images/men-men.jpg');">
+      <div class="container">
+        <div class="content-grid reverse">
+          <div class="text-col" data-aos="fade-left">
+            <h3 class="product-title">Mèn Mén A Phủ</h3>
+            <div class="product-price">7k</div>
+            <p class="product-desc">Món ăn truyền thống từ ngô, dẻo thơm, mộc mạc.</p>
+          </div>
+          <div class="image-col" data-aos="fade-right">
+            <div class="image-wrapper">
+              <img src="/images/men-men.jpg" alt="Mèn mén"
+                onerror="this.src='https://placehold.co/800x500/ffd600/d50000?text=Mèn+Mén'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 5 -->
+    <div class="product-section" style="background-image: url('/images/thang-co.jpg');">
+      <div class="container">
+        <div class="content-grid">
+          <div class="text-col" data-aos="fade-right">
+            <h3 class="product-title">Thắng Cố A Páo</h3>
+            <div class="product-price">20k</div>
+            <p class="product-desc">Đặc sản trứ danh, hương vị độc đáo không thể chối từ.</p>
+          </div>
+          <div class="image-col" data-aos="fade-left">
+            <div class="image-wrapper">
+              <img src="/images/thang-co.jpg" alt="Thắng cố"
+                onerror="this.src='https://placehold.co/800x500/d50000/ffd600?text=Thắng+Cố'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 6 -->
+    <div class="product-section" style="background-image: url('/images/banh-mi.jpg');">
+      <div class="container">
+        <div class="content-grid reverse">
+          <div class="text-col" data-aos="fade-left">
+            <h3 class="product-title">Bánh Mì Que A Sử</h3>
+            <div class="product-price">5k</div>
+            <p class="product-desc">Giòn tan, nóng hổi, ăn là ghiền.</p>
+          </div>
+          <div class="image-col" data-aos="fade-right">
+            <div class="image-wrapper">
+              <img src="/images/banh-mi.jpg" alt="Bánh mì"
+                onerror="this.src='https://placehold.co/800x500/ffd600/d50000?text=Bánh+Mì'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 7 -->
+    <div class="product-section" style="background-image: url('/images/vien-chien.jpg');">
+      <div class="container">
+        <div class="content-grid">
+          <div class="text-col" data-aos="fade-right">
+            <h3 class="product-title">Viên Chiên Que</h3>
+            <div class="product-price">10k</div>
+            <p class="product-desc">Món ăn vặt yêu thích của Mầm Non Bản Nhỏ.</p>
+          </div>
+          <div class="image-col" data-aos="fade-left">
+            <div class="image-wrapper">
+              <img src="/images/vien-chien.jpg" alt="Viên chiên"
+                onerror="this.src='https://placehold.co/800x500/d50000/ffd600?text=Viên+Chiên'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Divider 2 -->
+    <div class="category-divider" data-aos="fade-in">
+      <div class="container">
+        <h2>A Sử - Vua Đồ Uống</h2>
+        <p>Thanh mát như gió núi, rạng rỡ như nắng vàng</p>
+      </div>
+    </div>
+
+    <!-- ITEM 8 -->
+    <div class="product-section" style="background-image: url('/images/xoai-lac.jpg');">
+      <div class="container">
+        <div class="content-grid reverse">
+          <div class="text-col" data-aos="fade-left">
+            <h3 class="product-title">Xoài Lắc Gió Núi</h3>
+            <div class="product-price">10k</div>
+            <p class="product-desc">Chua chua ngọt ngọt, giòn tan vị xoài tươi.</p>
+          </div>
+          <div class="image-col" data-aos="fade-right">
+            <div class="image-wrapper">
+              <img src="/images/xoai-lac.jpg" alt="Xoài lắc"
+                onerror="this.src='https://placehold.co/800x500/ffd600/d50000?text=Xoài+Lắc'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 9 -->
+    <div class="product-section" style="background-image: url('/images/tra-sua.jpg');">
+      <div class="container">
+        <div class="content-grid">
+          <div class="text-col" data-aos="fade-right">
+            <h3 class="product-title">Trà Sữa Sương Sớm</h3>
+            <div class="product-price">10k</div>
+            <p class="product-desc">Thơm béo, ngọt ngào như sương sớm bản cao.</p>
+          </div>
+          <div class="image-col" data-aos="fade-left">
+            <div class="image-wrapper">
+              <img src="/images/tra-sua.jpg" alt="Trà sữa"
+                onerror="this.src='https://placehold.co/800x500/d50000/ffd600?text=Trà+Sữa'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 10 -->
+    <div class="product-section" style="background-image: url('/images/tra-tac.jpg');">
+      <div class="container">
+        <div class="content-grid reverse">
+          <div class="text-col" data-aos="fade-left">
+            <h3 class="product-title">Trà Tắc Nắng Vàng</h3>
+            <div class="product-price">10k</div>
+            <p class="product-desc">Giải nhiệt cực đã, mát lạnh sườn đồi.</p>
+          </div>
+          <div class="image-col" data-aos="fade-right">
+            <div class="image-wrapper">
+              <img src="/images/tra-tac.jpg" alt="Trà tắc"
+                onerror="this.src='https://placehold.co/800x500/ffd600/d50000?text=Trà+Tắc'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Divider 3 -->
+    <div class="category-divider" data-aos="fade-in">
+      <div class="container">
+        <h2>Sân Chơi & Thư Pháp</h2>
+        <p>Nơi lưu giữ niềm vui và ước mơ</p>
+      </div>
+    </div>
+
+    <!-- ITEM 11 -->
+    <div class="product-section no-image">
+      <div class="container">
+        <div class="content-grid">
+          <div class="text-col" data-aos="fade-right">
+            <h3 class="product-title">Lật Đật Bản Em</h3>
+            <div class="product-price">5k</div>
+            <p class="product-desc">Trò chơi vui nhộn, thử thách sự khéo léo. Ai khéo tay hơn nào?</p>
+          </div>
+          <div class="image-col" data-aos="fade-left">
+            <div class="image-wrapper">
+              <div class="pattern-box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 12 -->
+    <div class="product-section no-image">
+      <div class="container">
+        <div class="content-grid reverse">
+          <div class="text-col" data-aos="fade-left">
+            <h3 class="product-title">Thú Nhảy – Bóng Hoa</h3>
+            <div class="product-price">5k</div>
+            <p class="product-desc">Sắc màu hội xuân, những chú thú nhún nhảy vui nhộn cho mọi người.</p>
+          </div>
+          <div class="image-col" data-aos="fade-right">
+            <div class="image-wrapper">
+              <div class="pattern-box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 13 -->
+    <div class="product-section no-image">
+      <div class="container">
+        <div class="content-grid">
+          <div class="text-col" data-aos="fade-right">
+            <h3 class="product-title">Gieo Con Chữ (Thư Pháp)</h3>
+            <div class="product-price">Từ 5k</div>
+            <p class="product-desc">Xin chữ đầu năm, dệt ước mơ, cầu may mắn và bình an.</p>
+          </div>
+          <div class="image-col" data-aos="fade-left">
+            <div class="image-wrapper">
+              <div class="pattern-box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
