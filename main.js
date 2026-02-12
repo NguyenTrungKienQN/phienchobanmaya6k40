@@ -76,6 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Background Music - Auto-play on first user interaction
   const music = document.getElementById('bg-music');
   if (music) {
+    // Set source dynamically so Vite's base URL works on GitHub Pages
+    music.src = import.meta.env.BASE_URL + 'images/music.MP3';
     music.volume = 0.3;
     const tryPlay = () => {
       music.play().catch(() => { });
