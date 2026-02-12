@@ -73,24 +73,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Background Music - Auto-play on first user interaction
+  // Background Music
   const music = document.getElementById('bg-music');
   if (music) {
-    // Set source dynamically so Vite's base URL works on GitHub Pages
     music.src = import.meta.env.BASE_URL + 'images/music.MP3';
     music.volume = 0.3;
-    const tryPlay = () => {
-      music.play().catch(() => { });
-      document.removeEventListener('click', tryPlay);
-      document.removeEventListener('scroll', tryPlay);
-      document.removeEventListener('touchstart', tryPlay);
-    };
-    // Try autoplay immediately
-    music.play().catch(() => {
-      // Blocked by browser - wait for first user interaction
-      document.addEventListener('click', tryPlay, { once: true });
-      document.addEventListener('scroll', tryPlay, { once: true });
-      document.addEventListener('touchstart', tryPlay, { once: true });
+    console.log('[Music] Source set to:', music.src);
+
+    function startMusic() {
+      music.play().then(() => {
+        console.log('[Music] Playing!');
+      }).catch((e) => {
+        console.log('[Music] Play blocked:', e.message);
+      });
+    }
+
+    // Try autoplay right away
+    startMusic();
+
+    // Also try on ANY user interaction (click, scroll, touch, keypress)
+    ['click', 'scroll', 'touchstart', 'keydown'].forEach(evt => {
+      document.addEventListener(evt, function handler() {
+        startMusic();
+        document.removeEventListener(evt, handler);
+      }, { once: true });
     });
   }
 });

@@ -383,8 +383,9 @@
     <div class="section section-dark coupon-section"
       style="text-align: center; background: var(--color-red-primary); padding: 4rem 0;">
       <div class="container" data-aos="zoom-in">
-        <h2 style="color: var(--color-yellow-gold); font-size: 2.5rem; margin-bottom: 1rem;">🧧 Rút Lộc Đầu Xuân 🧧</h2>
-        <p style="color: white; font-size: 1.5rem; font-weight: bold;">Hóa đơn trên 50K được rút lộc đầu xuân!</p>
+        <h2 style="color: var(--color-yellow-gold); font-size: 2.5rem; margin-bottom: 1rem;">🧧 Voucher Đặc Biệt 🧧</h2>
+        <p style="color: white; font-size: 1.5rem; font-weight: bold;">Hoá đơn trên 50K nhận ngay 1 lượt hái lộc đầu
+          xuân.</p>
       </div>
     </div>
 
@@ -397,5 +398,28 @@
     </div>
   </footer>
 
-  <!-- Background Music (autoplay) -->
-  <audio id="bg-music" loop autoplay></audio>
+  <!-- Background Music -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="/phienchobanmaya6k40/images/music.MP3" type="audio/mpeg">
+    <source src="/images/music.MP3" type="audio/mpeg">
+  </audio>
+  <script>
+    // Standalone music script - doesn't depend on main.js
+    (function () {
+      var m = document.getElementById('bg-music');
+      if (!m) return;
+      m.volume = 0.3;
+      function go() {
+        m.play().catch(function () { });
+      }
+      // Try immediately
+      go();
+      // Also try on first interaction
+      ['click', 'scroll', 'touchstart', 'keydown'].forEach(function (e) {
+        document.addEventListener(e, function f() {
+          go();
+          document.removeEventListener(e, f);
+        });
+      });
+    })();
+  </script>
